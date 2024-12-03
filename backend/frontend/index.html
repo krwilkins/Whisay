@@ -9,8 +9,12 @@
 <body>
   <div class="container">
     <h1>Translate Your Image</h1>
-    <input type="file" accept="image/*" capture="camera" id="image-input">
-    <button onclick="translateImage()">Translate</button>
+    <input type="file" accept="image/*" id="image-input" style="display: none;">
+    <label for="image-input" class="custom-file-upload">Upload Photo</label>
+    <button id="translate-button" onclick="translateImage()" disabled>Translate</button>
+    <div class="progress-container">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
     <div id="result"></div>
   </div>
   <script src="script.js"></script>
